@@ -76,9 +76,34 @@
         <!-- CSS -->
         <link rel="stylesheet" href="assets/css/normalize.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/responsive.css" />
         <title>F8 Project 04</title>
     </head>
     <body>
+        <!-- Mobile Header -->
+        <div class="mobile-header show-on-mobile">
+            <a href="/">
+                <div class="logo">
+                    <img
+                        src="assets/images/Logo/Logo.svg"
+                        alt="Logo Image"
+                        class="logo__img" />
+                    <span class="logo__text">MODULARS</span>
+                </div>
+            </a>
+            <div class="action">
+                <button class="btn">Sign Up</button>
+                <svg
+                    class="menu-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 448 512">
+                    <path
+                        fill="currentColor"
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                </svg>
+            </div>
+        </div>
         <!-- Header -->
         <header class="header">
             <div class="container">
@@ -245,7 +270,7 @@
             </div>
         </header>
         <!-- Main -->
-        <main class="main" style="height: 6000px">
+        <main class="main">
             <!-- Collaboration -->
             <section class="collboration">
                 <div class="container">
@@ -268,7 +293,10 @@
                             <span>Discord</span>
                         </div>
                         <div class="collboration__item">
-                            <span>RioTinto</span>
+                            <img
+                                style="height: 13px; width: 99px"
+                                src="assets/images/Collboration/RioTinto.svg"
+                                alt="" />
                         </div>
                         <div class="collboration__item">
                             <img
@@ -325,6 +353,39 @@
                     </div>
                     <!-- Dùng Grid thay vì Flex -->
                     <article class="services__list">
+                        <div class="services__list-cta show-on-mobile">
+                            <button class="services__list-btn">
+                                <svg
+                                    class=""
+                                    width="6"
+                                    height="10"
+                                    viewBox="0 0 6 10"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1 5.23529H1.11482M1.11482 5.23529L5 1M1.11482 5.23529L5 9"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <button
+                                class="services__list-btn services__list-btn--right">
+                                <svg
+                                    class=""
+                                    width="6"
+                                    height="10"
+                                    viewBox="0 0 6 10"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1 5.23529H1.11482M1.11482 5.23529L5 1M1.11482 5.23529L5 9"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
                         <div class="services__item">
                             <div class="services__item-thumb">
                                 <img

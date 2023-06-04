@@ -190,6 +190,18 @@ header {
 .navbar__link.active {
     color: #152427;
 }
+.mobile-header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    color: #000;
+}
 /* Hero */
 .hero {
     position: relative;
@@ -254,6 +266,14 @@ header {
     font-size: 1.8rem;
     line-height: 1.67;
     color: #152427;
+}
+.mobile-header {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    backdrop-filter: blur(14px);
 }
 /* Hero Media */
 .hero__media {
@@ -376,9 +396,34 @@ header {
 }
 .services__list {
     margin-top: 76px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 16px;
+}
+.services__list-cta {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 48px);
+}
+.services__list-btn {
+    width: 33px;
+    height: 33px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+}
+.services__list-btn:first-child {
+    margin-left: -12px;
+}
+.services__list-btn:last-child {
+    color: #fff;
+    background: #143c3c;
+}
+.services__list-btn--right {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 .services__item {
     transition: 0.3s;
@@ -411,6 +456,7 @@ header {
     color: #152427;
 }
 .services__item-desc {
+    font-family: "Poppins", sans-serif;
     width: 268px;
     font-weight: 500;
     font-size: 1.4rem;
@@ -556,7 +602,11 @@ header {
 .process-heading {
     width: 477px;
 }
-.process__item {
+.process__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+/* .process__item {
     position: relative;
     font-family: "Poppins";
     cursor: pointer;
@@ -572,7 +622,7 @@ header {
     background: #e2eddf;
     border-radius: 33px;
     border-bottom: unset;
-}
+} */
 .process__item-detail {
     margin-left: 50px;
 }
